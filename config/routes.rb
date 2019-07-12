@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   end
   devise_for :users
   root to: 'posts#index'
+  resources :pendings 
 end

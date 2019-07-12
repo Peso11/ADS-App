@@ -63,6 +63,11 @@ class PostsController < ApplicationController
     redirect_to @post
   end
 
+  def pend
+    @post=Post.find(params[:id])
+    @post.pend!
+  end
+
   private
     
     def set_post
