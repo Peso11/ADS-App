@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @post.description %>
+</p>
+<% @post.images.each do |img| %>
+  <%= image_tag img, style: "width: 400px;" %>
+  <%= link_to 'x', remove_attachment_post_path(img), method: :delete %>
+<% end %>
+<div class="row">
+<%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-primary' %> |
+<%= link_to 'Back', posts_path, class: 'btn btn-primary' %>
+</div>
