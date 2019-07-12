@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :pend]
   before_action :authenticate_user!
   
   
@@ -64,8 +64,8 @@ class PostsController < ApplicationController
   end
 
   def pend
-    @post=Post.find(params[:id])
     @post.pend!
+    redirect_to @post
   end
 
   private
