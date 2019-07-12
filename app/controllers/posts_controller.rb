@@ -1,8 +1,11 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  
+  
 
   def index
-    @posts = Post.all
+    @posts = current_user.posts.unverified
   end
 
   def show
