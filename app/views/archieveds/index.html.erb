@@ -1,0 +1,23 @@
+<h1>My archieveds posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @archieveds.each do |archieved| %>
+      <tr>
+        <td><%= archieved.title %></td>
+        <td><%= archieved.description %></td>
+        <td><%= button_to 'Back to my unverifieds', back_to_unverified_archieved_path(@archieved.id),method: :put %></td> 
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

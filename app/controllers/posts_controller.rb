@@ -65,7 +65,7 @@ class PostsController < ApplicationController
 
   def pend
     @post.pend!
-    redirect_to @post
+    redirect_to posts_url
   end
 
   private

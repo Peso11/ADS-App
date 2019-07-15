@@ -29,6 +29,11 @@ class Post < ApplicationRecord
     event :archive do
       transitions from: [:published, :verified, :unverified], to: :archived
     end
+
+    event :back_to_unverified do
+      transitions from: [:archieved], to: :unverified
+    end
+        
 end
 
   def self.unverified
