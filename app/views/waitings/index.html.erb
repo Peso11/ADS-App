@@ -1,0 +1,24 @@
+<h1>Waiting posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @waitings.each do |waiting| %>
+      <tr>
+        <td><%= waiting.title %></td>
+        <td><%= waiting.description %></td>
+        <td><%= button_to 'Verify', verify_waiting_path(waiting), method: :put %></td>
+        <td><%= button_to 'Reject', reject_waiting_path(waiting), method: :put %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

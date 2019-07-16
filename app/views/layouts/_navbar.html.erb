@@ -7,6 +7,9 @@
       <%= link_to 'My verifieds', verifieds_path, class: 'navbar-brand' %>
       <%= link_to 'My archieveds', archieveds_path, class: 'navbar-brand' %>
       <% end %>
+      <% if current_user.has_role? :admin %>
+      <%= link_to 'Waitings', waitings_path, class: 'navbar-brand' %>
+      <% end %>
     </div>
     <div id="navbar">
       <ul class="nav navbar-nav">

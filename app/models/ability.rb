@@ -17,6 +17,12 @@ class Ability
 
       can :pend, Post.unverified, user_id: user.id 
       can :back_to_unverified, Post.archieved, user_id: user.id
+    elsif user.has_role? :admin
+      can :read, :all
+      can :verify, Post.pending
+      can :reject, Post.pending
+    else
+      can :read, Post.published
     end
 
 

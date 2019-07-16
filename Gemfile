@@ -33,6 +33,7 @@ gem 'jquery-turbolinks'
 gem 'aasm'
 gem 'cancancan'
 gem 'rolify'
+gem 'rails_admin'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
