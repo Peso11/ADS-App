@@ -31,6 +31,8 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'aasm'
+gem 'cancancan'
+gem 'rolify'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
